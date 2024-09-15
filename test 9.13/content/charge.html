@@ -1,0 +1,65 @@
+<div id="charge" class="section active">
+    <h2>Charge</h2>
+    <p>
+        Used to set up the button for credit card transactions
+        Language: Works default is English
+        Send Email Confirmation:
+        email => youremail@gmail.com
+        Default: Ask for Zip (If International Card Holders set to False):
+        zip => false
+        The default is true you don't need to put it in only if you want to turn it off
+        Description for the Credit Card Processing Portal:
+        ccDescription => Phone Signup
+        If Charged Succeeded, Set IVR to Send Callers to:
+        onSuccess => IVR ID Number
+        If Failed, Set IVR to Send the Caller to:
+        onFailure => IVR ID Number
+        Set Currency:
+        currency => dollar
+        Set Gateway:
+        gateway => cardknox or usaepay
+        There is a per account default, so Gateway=>only needs to be specified if needed to overwrite the default.
+        Gateway Key:
+        gwKey => xyxyxyxyxyxyxyxyxy
+        Set Amount to Charge:
+        amount => 65 or 65.50
+        To Connect, It Should Show in Charge Portal:
+        integration => db
+        When no preset amount it set you could set:
+        min=>1
+        max=>3600 (max is 3600 for security)
+        If Entered a Invalid Amount It Will Play the Allowed Amount C with Currency:
+        invalid => range
+        invalid => rangeC
+        Billing Phone Number Should Be the CID Number:
+        autobpn => true
+        autobpn => prompt that will say your calling from 123-234-0000 to use this number press press 1
+        Prerecord Name and Address or Name:
+        prerecord => nameaddress or name
+        Should Play the Number:
+        playRefNum
+        Ask for the Amount (Only If It's Not a Fixed Amount):
+        gather => card:amount
+        recurring
+        default is amount
+        recurring amount
+        
+        successAction=>noteRecord=>record gonna play
+        Should Only Ask for Record If Above This Amount (If Recurring Will Collect Up to 12 Months to Match):
+        noteRecordAmount => 54
+        Asks for a Key to Record (If Outro Will Play the Outro, If Not, It Will Play Automated 0; If You Want a Different Number, You Must Add an Outro):
+        noteRecordKey => 1 
+        How Many Payments by Recurring, Including Today's Payment:
+        numleft => * if you dont put it it will go until manually canceled 
+        Recurring Option:
+        recurring => monthly or weekly
+        Should Ask Over Everything is this correct press 1 if not press 2:
+        confirmation => true or false
+        Should Say Over the amount Before Charge (Does Not Work on Recurring):
+        confirmCharge => true or false
+        One Button That Will Give the Choice for recurring or one time donation:
+        promptRecurring => true
+        To only show the charge in the charge portal from one IVR:
+        customAction => app_charge
+    </p>
+</div>

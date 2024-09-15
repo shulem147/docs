@@ -1,0 +1,32 @@
+<div id="auto-signup" class="section active">
+    <h2>Auto Sign-Up</h2>
+    <p>
+        Set action for Custom
+        Language: works
+        If Customer Needs Signup:
+        customAction => aclAdd
+        Comment for the ACL List:
+        comments => Self Registration
+        How Many Phone Numbers to Add to the List:
+        aclMaxNumbers => 2
+        If Charged Succeeded, Set IVR to Send Callers to:
+        onSuccess => IVR ID Number
+        If Failed, Set IVR to Send the Caller to:
+        onFailure => IVR ID Number
+        If You Want It to Be Saved in Active and Turn It On Manually:
+        aclAddInactive => true
+        Put in the Name of the List to Add the Numbers to:
+        aclName => name of list
+        Save the Caller ID Number for the ACL List:
+        aclAutoCid => true
+        Set a Preset Expiration Time:
+        expirationDetail => 6 months (needs this to work)
+        expiration => interval
+        Should Take the Name from Caller ID as the Name on the List:
+        aclAutoCidName => true
+        Should Require to Record Name After Signup:
+        recordName => true
+        Send Email Confirmation:
+        email => youremail@gmail.com
+    </p>
+</div>
